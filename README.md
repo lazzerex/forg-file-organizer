@@ -1,6 +1,6 @@
-# File Organizer CLI (forg)
+# File Organizer CLI (Forg)
 
-A fast, efficient command-line tool written in Rust for organizing files by type, date, or custom rules. Perfect for cleaning up messy directories and maintaining organized file systems.
+Introducutng Forg! A fast, efficient command-line tool written in Rust for organizing files by type, date, or custom rules. Perfect for cleaning up messy directories and maintaining organized file systems.
 
 ## Features
 
@@ -17,8 +17,8 @@ A fast, efficient command-line tool written in Rust for organizing files by type
 ### From Source
 
 ```bash
-git clone https://github.com/add-later/file-organizer
-cd file-organizer
+git clone https://github.com/lazzerex/forg-file-organizer
+cd forg-file-organizer
 cargo build --release
 ```
 
@@ -28,7 +28,7 @@ The binary will be available at `target/release/forg`.
 
 ```bash
 # Add to your shell profile (.bashrc, .zshrc, etc.)
-export PATH="$PATH:/path/to/file-organizer/target/release"
+export PATH="$PATH:/path/to/forg-file-organizer/target/release"
 ```
 
 ## Usage
