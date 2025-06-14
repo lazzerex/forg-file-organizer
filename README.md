@@ -1,6 +1,6 @@
 # File Organizer CLI (Forg)
 
-Introducutng Forg! A fast, efficient command-line tool written in Rust for organizing files by type, date, or custom rules. Perfect for cleaning up messy directories and maintaining organized file systems.
+Introducing Forg! A fast, efficient command-line tool written in Rust for organizing files by type, date, or custom rules. Perfect for cleaning up messy directories and maintaining organized file systems.
 
 ## Features
 
