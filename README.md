@@ -3,7 +3,7 @@
 Introducing Forg! A fast, efficient command-line tool written in Rust for organizing files by type, date, or custom rules. Perfect for cleaning up messy directories and maintaining organized file systems.
 
 
-https://github.com/user-attachments/assets/6da812dc-8aed-4ae7-a12b-80c780534d3a
+https://github.com/user-attachments/assets/d7bb6292-0271-4bae-b4ee-c3271a5cec5c
 
 ## Features
 
