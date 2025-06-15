@@ -15,6 +15,9 @@ https://github.com/user-attachments/assets/7c3948bf-2e9a-41c3-87e6-eb587dade09a
 - **Colorized output**: Easy-to-read terminal output with colored text labels
 - **Configurable**: Customize file type mappings and ignore patterns
 
+![image](https://github.com/user-attachments/assets/64efed94-0642-4051-979b-9450effff42b)
+
+
 ## Installation
 
 ### From Source
