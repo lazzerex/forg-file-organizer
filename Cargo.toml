@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 description = "A CLI tool to organize files by type, date, or custom rules"
 license = "MIT"
-repository = "https://github.com/yourusername/file-organizer"
+repository = "https://github.com/lazzerex/forg-file-organizer"
 keywords = ["cli", "file-management", "organization"]
 
 [[bin]]
