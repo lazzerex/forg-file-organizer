@@ -20,51 +20,51 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Commands {
-    /// Organize files by extension into folders
+    /// organize files by extension into folders
     ByType {
-        /// Source directory to organize
+        /// source directory to organize
         #[arg(short, long, default_value = ".")]
         source: PathBuf,
-        /// Target directory (creates subfolders here)
+        /// target directory (creates subfolders here maybe same as source)
         #[arg(short, long)]
         target: Option<PathBuf>,
-        /// Preview changes without executing
+        /// preview changes without executing 
         #[arg(short, long)]
         dry_run: bool,
     },
-    /// Organize files by creation/modification date
+    /// organize files by creation/modification date
     ByDate {
-        /// Source directory to organize
+        /// source directory to organize
         #[arg(short, long, default_value = ".")]
         source: PathBuf,
-        /// Target directory
+        /// target directory
         #[arg(short, long)]
         target: Option<PathBuf>,
-        /// Date format: year, month, or day
+        /// date format: year, month, or day
         #[arg(short, long, default_value = "month")]
         format: String,
-        /// Preview changes without executing
+        /// preview changes without executing
         #[arg(short, long)]
         dry_run: bool,
     },
-    /// Clean up empty directories
+    /// clean up empty directories
     Clean {
-        /// Directory to clean
+        /// directory to clean
         #[arg(short, long, default_value = ".")]
         directory: PathBuf,
-        /// Preview changes without executing
+        /// preview changes without executing
         #[arg(short, long)]
         dry_run: bool,
     },
-    /// Show file statistics for a directory  
+    /// show file statistics for a directory
     Stats {
-        /// Directory to analyze
+        /// directory to analyze
         #[arg(short, long, default_value = ".")]
         directory: PathBuf,
     },
-    /// Generate a default configuration file
+    /// generate a default configuration file
     Config {
-        /// Output path for config file
+        /// output path for config file
         #[arg(short, long, default_value = "forg-config.json")]
         output: PathBuf,
     },

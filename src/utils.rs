@@ -47,7 +47,7 @@ pub fn get_file_type_folder(extension: &str) -> String {
     }
 }
 
-/// Formats file size in human-readable format
+/// formats file size in human-readable format 
 pub fn format_file_size(size: u64) -> String {
     const UNITS: &[&str] = &["B", "KB", "MB", "GB", "TB"];
     let mut size = size as f64;
@@ -64,6 +64,8 @@ pub fn format_file_size(size: u64) -> String {
         format!("{:.1} {}", size, UNITS[unit_index])
     }
 }
+
+//run tests because why not
 
 #[cfg(test)]
 mod tests {

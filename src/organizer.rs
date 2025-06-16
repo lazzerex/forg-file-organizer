@@ -119,7 +119,7 @@ impl FileOrganizer {
 
         let mut removed_count = 0;
 
-        // Collect directories to remove (we need to go depth-first)
+        // check depth first because idk
         let mut dirs_to_check: Vec<PathBuf> = Vec::new();
         
         for entry in WalkDir::new(&self.source)
@@ -132,7 +132,7 @@ impl FileOrganizer {
             }
         }
 
-        // Sort by depth (deepest first)
+        // sort by depth (deepest first)
         dirs_to_check.sort_by(|a, b| b.components().count().cmp(&a.components().count()));
 
         for dir in dirs_to_check {
@@ -189,7 +189,7 @@ impl FileOrganizer {
             }
         }
 
-        // Sort by file count
+        // sorting by file count
         let mut sorted_types: Vec<_> = file_types.iter().collect();
         sorted_types.sort_by(|a, b| b.1.0.cmp(&a.1.0));
 
@@ -224,7 +224,7 @@ impl FileOrganizer {
         let target_dir = self.target.join(&folder_name);
         let target_path = target_dir.join(file_name);
 
-        // Skip if file is already in the correct location
+        // just skip if file has correct location
         if file_path == target_path {
             return Ok(false);
         }
@@ -235,7 +235,7 @@ impl FileOrganizer {
                     file_path.display(), 
                     target_path.display());
         } else {
-            // Create target directory if it doesn't exist
+            // create a new target directory if it doesn't exist
             fs::create_dir_all(&target_dir)
                 .with_context(|| format!("Failed to create directory: {}", target_dir.display()))?;
 
@@ -272,7 +272,7 @@ impl FileOrganizer {
         let target_dir = self.target.join(&folder_name);
         let target_path = target_dir.join(file_name);
 
-        // Skip if file is already in the correct location
+        
         if file_path == target_path {
             return Ok(false);
         }
@@ -283,11 +283,11 @@ impl FileOrganizer {
                     file_path.display(), 
                     target_path.display());
         } else {
-            // Create target directory if it doesn't exist
+            
             fs::create_dir_all(&target_dir)
                 .with_context(|| format!("Failed to create directory: {}", target_dir.display()))?;
 
-            // Move the file
+           
             fs::rename(file_path, &target_path)
                 .with_context(|| format!("Failed to move file: {} -> {}", 
                                        file_path.display(), 
